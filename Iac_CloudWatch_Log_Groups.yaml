@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudWatch Log Groups for centralized logging'
+
+Resources:
+  ApplicationLogGroup:
+    Type: 'AWS::Logs::LogGroup'
+    Properties:
+      LogGroupName: 'APPLICATION_LOG_GROUP_NAME_PLACEHOLDER'
+
+  SystemLogGroup:
+    Type: 'AWS::Logs::LogGroup'
+    Properties:
+      LogGroupName: 'SYSTEM_LOG_GROUP_NAME_PLACEHOLDER'
+
+Outputs:
+  LogGroups:
+    Description: 'CloudWatch Log Groups created'
+    Value: !Join [',', [!Ref ApplicationLogGroup, !Ref SystemLogGroup]]
+

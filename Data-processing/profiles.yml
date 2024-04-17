@@ -1,0 +1,43 @@
+"""
+The profiles.yml file is another important configuration file used by dbt. It defines connection details for your target databases, allowing dbt to connect and execute SQL queries against them. Here's an example of what this file might look like for your project:
+"""
+
+
+my_redshift_profile:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: your-redshift-hostname.amazonaws.com
+      port: 5439
+      user: your-redshift-username
+      password: your-redshift-password
+      dbname: your-redshift-database-name
+      schema: public
+      threads: 1
+      keepalives_idle: 0
+      search_path: public
+      sslmode: prefer
+
+
+
+
+"""
+Let's go through each part of this file:
+
+my_redshift_profile: This is the name of the profile. You can choose any name you like, but it should be unique and descriptive.
+target: This specifies the target environment for the profile. In this example, it's set to dev, but you can use different target environments for different purposes (e.g., prod, test).
+outputs: This section contains the connection details for the target database. Under the dev environment, it specifies the connection details for Redshift.
+type: This specifies the type of the target database. In this case, it's set to redshift.
+host: This is the hostname or endpoint of your Redshift cluster.
+port: This is the port number used to connect to your Redshift cluster. The default port for Redshift is 5439.
+user: This is the username used to authenticate to your Redshift cluster.
+password: This is the password used to authenticate to your Redshift cluster.
+dbname: This is the name of the database you want to connect to in your Redshift cluster.
+schema: This is the default schema to use when running queries against your Redshift cluster.
+threads: This specifies the number of threads dbt should use when executing queries. Adjust this based on the resources available in your environment.
+keepalives_idle: This specifies the interval (in seconds) between keepalive messages sent over the connection to keep it alive. Set to 0 to disable keepalives.
+search_path: This specifies the default search path to use when executing queries against your Redshift cluster.
+sslmode: This specifies the SSL mode to use when connecting to your Redshift cluster. Set to prefer to prefer SSL but allow a non-SSL connection if SSL is not available.
+You can add additional profiles for different target databases or environments as needed. Once you've configured your profiles.yml file, dbt will use these connection details when executing SQL queries against your target database.
+      """

@@ -1,0 +1,7 @@
+COPY my_schema.my_table
+FROM 's3://my-bucket/my-folder/data.csv'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT CSV
+DELIMITER ','
+IGNOREHEADER 1;
+

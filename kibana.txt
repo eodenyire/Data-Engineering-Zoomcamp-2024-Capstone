@@ -1,0 +1,35 @@
+Kibana: Kibana is a data visualization and exploration tool that works seamlessly with Elasticsearch. We'll use Kibana to create dashboards, visualizations, and exploration queries based on the log data stored in Elasticsearch. We can monitor key metrics, track system performance, troubleshoot issues, and gain insights into our data pipeline's health and performance using Kibana's rich set of visualization features.
+ChatGPT
+To deploy Kibana using AWS CloudFormation, you can use the following YAML template:
+
+yaml
+Copy code
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Deployment of Kibana for log visualization'
+
+Resources:
+  KibanaInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: 't2.micro'
+      ImageId: 'AMI_ID_PLACEHOLDER'
+      SecurityGroupIds:
+        - 'SECURITY_GROUP_ID_PLACEHOLDER'
+      KeyName: 'KEY_PAIR_NAME_PLACEHOLDER'
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          sudo yum update -y
+          sudo yum install -y java-1.8.0
+          sudo wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo rpm --import -
+          sudo yum install -y kibana
+          sudo systemctl start kibana
+          sudo systemctl enable kibana
+      Tags:
+        - Key: 'Name'
+          Value: 'KibanaInstance'
+
+Outputs:
+  KibanaInstancePublicIp:
+    Description: 'Public IP address of the Kibana instance'
+    Value: !GetAtt KibanaInstance.PublicIp

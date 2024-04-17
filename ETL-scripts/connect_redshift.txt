@@ -1,0 +1,12 @@
+To connect to Redshift, you typically need the following information:
+
+Endpoint/Hostname: The endpoint or hostname of your Redshift cluster.
+Port: The port number to connect to Redshift. The default port is 5439.
+Database Name: The name of the database you want to connect to.
+Username: The username to authenticate with Redshift.
+Password: The password to authenticate with Redshift.
+These details should have been provisioned as part of your Terraform script when setting up the Redshift cluster. You would have specified these values in the Terraform configuration file (.tf file) used to create the Redshift cluster.
+
+To retrieve this information, you can either refer back to your Terraform configuration file or check the AWS Management Console. Additionally, you might have stored these details securely in a secrets manager or a parameter store, which you can access programmatically using AWS SDKs or command-line tools like AWS CLI.
+
+Once you have the connection details, you can use them in your script (your_script_to_write_to_redshift.sh in this case) to establish a connection to Redshift and write the processed data.

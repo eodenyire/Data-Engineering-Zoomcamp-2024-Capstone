@@ -1,0 +1,13 @@
+While the SQL queries define the transformations you want to apply to your data, there are a few additional steps you'll need to take to fully utilize dbt:
+
+YAML Configuration: dbt relies on YAML configuration files to manage project settings, connections, and other parameters. You'll need to configure these files according to your project requirements. The most important configuration file is dbt_project.yml, which defines project-level settings such as project name, version, and target database connection.
+
+Profiles Configuration: You'll need to configure a profiles.yml file to specify connection details for your target database (in this case, Redshift). This file allows dbt to connect to your database and execute the SQL queries defined in your models.
+
+Dependency Management: dbt allows you to define dependencies between your models, specifying the order in which they should be executed. This ensures that transformations are applied in the correct sequence and that downstream models have access to the output of upstream models.
+
+Testing: dbt provides features for testing the output of your transformations to ensure data quality and integrity. You can define tests to validate the correctness of your transformations and to catch any discrepancies or anomalies in your data.
+
+Documentation: dbt allows you to document your models, describing their purpose, inputs, outputs, and any other relevant information. Documentation helps make your data transformations more transparent and understandable to other team members.
+
+Once you have these additional components in place, you'll be ready to run dbt and execute your data transformations.

@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudWatch Alarms for monitoring AWS resources'
+
+Resources:
+  CPUUtilizationAlarm:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmDescription: 'Alarm for high CPU utilization'
+      Namespace: 'AWS/EC2'
+      MetricName: 'CPUUtilization'
+      Dimensions:
+        - Name: 'InstanceId'
+          Value: 'INSTANCE_ID_PLACEHOLDER'
+      Statistic: 'Average'
+      Period: 300
+      Threshold: 80
+      ComparisonOperator: 'GreaterThanThreshold'
+      EvaluationPeriods: 1
+      AlarmActions:
+        - 'arn:aws:sns:REGION:ACCOUNT_ID:TOPIC_NAME_PLACEHOLDER'
+
+  MemoryUtilizationAlarm:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      AlarmDescription: 'Alarm for high memory utilization'
+      Namespace: 'System/Linux'
+      MetricName: 'MemoryUtilization'
+      Dimensions:
+        - Name: 'InstanceId'
+          Value: 'INSTANCE_ID_PLACEHOLDER'
+      Statistic: 'Average'
+      Period: 300
+      Threshold: 70
+      ComparisonOperator: 'GreaterThanThreshold'
+      EvaluationPeriods: 1
+      AlarmActions:
+        - 'arn:aws:sns:REGION:ACCOUNT_ID:TOPIC_NAME_PLACEHOLDER'
+
+Outputs:
+  CloudWatchAlarms:
+    Description: 'CloudWatch Alarms created'
+    Value: !Join [',', [!Ref CPUUtilizationAlarm, !Ref MemoryUtilizationAlarm]]
+

@@ -1,0 +1,90 @@
+We need to create the tables in Redshift before we can load data into them. We'll use SQL CREATE TABLE statements to define the schema for each table.
+
+Here's an example of how you can create a table in Redshift for the merchant_data:
+
+
+Here's an example of how you can create a table in Redshift for the merchant_data:
+
+sql
+Copy code
+CREATE TABLE merchant_data (
+    merchant_id VARCHAR(50),
+    merchant_name VARCHAR(255),
+    location VARCHAR(255),
+    category VARCHAR(100),
+    transaction_volume DECIMAL
+);
+This CREATE TABLE statement defines the schema of the merchant_data table with columns for merchant_id, merchant_name, location, category, and transaction_volume. Adjust the data types and column names as needed based on the actual schema of your data.
+
+You'll need to run similar CREATE TABLE statements for each of the other tables (currency_exchange_rates, user_profile_data, etc.) using the appropriate column names and data types.
+
+After creating the tables, you can proceed to load data into them using the COPY commands we discussed earlier.
+
+
+Let's create the CREATE TABLE statements for each of the Parquet files. Below are the example statements:
+
+merchant_data:
+sql
+Copy code
+CREATE TABLE merchant_data (
+    merchant_id VARCHAR(50),
+    merchant_name VARCHAR(255),
+    location VARCHAR(255),
+    category VARCHAR(100),
+    transaction_volume DECIMAL
+);
+currency_exchange_rates:
+sql
+Copy code
+CREATE TABLE currency_exchange_rates (
+    currency_code VARCHAR(3),
+    exchange_rate DECIMAL
+);
+user_profile_data:
+sql
+Copy code
+CREATE TABLE user_profile_data (
+    user_id VARCHAR(50),
+    age INT,
+    gender VARCHAR(10),
+    location VARCHAR(255),
+    income DECIMAL
+);
+transaction_metadata_data:
+sql
+Copy code
+CREATE TABLE transaction_metadata_data (
+    transaction_id VARCHAR(50),
+    timestamp TIMESTAMP,
+    transaction_type VARCHAR(50),
+    status VARCHAR(20)
+);
+device_and_location_data:
+sql
+Copy code
+CREATE TABLE device_and_location_data (
+    device_id VARCHAR(50),
+    device_type VARCHAR(50),
+    location VARCHAR(255)
+);
+fraud_indicators:
+sql
+Copy code
+CREATE TABLE fraud_indicators (
+    transaction_id VARCHAR(50),
+    fraud_flag BOOLEAN
+);
+customer_support_interactions:
+sql
+Copy code
+CREATE TABLE customer_support_interactions (
+    interaction_id VARCHAR(50),
+    customer_id VARCHAR(50),
+    interaction_type VARCHAR(50),
+    timestamp TIMESTAMP,
+    description TEXT
+);
+These CREATE TABLE statements define the schema for each table based on the columns in the respective Parquet files. Adjust the data types and column names as needed for your specific requirements.
+
+
+

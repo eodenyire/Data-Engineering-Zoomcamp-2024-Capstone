@@ -1,0 +1,11 @@
+Let's proceed with defining dbt models for each of the parquet files you mentioned. We'll include the transformations you described, such as replacing NULL values with zeros and converting all letters to lowercase.
+
+
+
+merchant_data.parquet
+currency_exchange_rates.parquet
+user_profile_data.parquet
+transaction_metadata_data.parquet
+device_and_location_data.parquet
+fraud_indicators.parquet
+customer_support_interactions.parquet

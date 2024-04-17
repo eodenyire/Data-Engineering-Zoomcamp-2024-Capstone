@@ -1,0 +1,30 @@
+AWS CloudWatch Log Groups: Log groups allow us to centralize and store log data from different sources, such as EC2 instances, Lambda functions, or containers. We'll configure our applications and services to send log data to CloudWatch log groups. This data can then be queried, analyzed, and visualized using CloudWatch Logs Insights or exported to other services for further processing
+
+
+Here's how you can define an AWS CloudFormation template in YAML format to create CloudWatch Log Groups:
+
+yaml
+Copy code
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudWatch Log Groups for centralized logging'
+
+Resources:
+  ApplicationLogGroup:
+    Type: 'AWS::Logs::LogGroup'
+    Properties:
+      LogGroupName: 'APPLICATION_LOG_GROUP_NAME_PLACEHOLDER'
+
+  SystemLogGroup:
+    Type: 'AWS::Logs::LogGroup'
+    Properties:
+      LogGroupName: 'SYSTEM_LOG_GROUP_NAME_PLACEHOLDER'
+
+Outputs:
+  LogGroups:
+    Description: 'CloudWatch Log Groups created'
+    Value: !Join [',', [!Ref ApplicationLogGroup, !Ref SystemLogGroup]]
+In this template:
+
+Replace APPLICATION_LOG_GROUP_NAME_PLACEHOLDER and SYSTEM_LOG_GROUP_NAME_PLACEHOLDER with the desired names for your log groups.
+You can add more log groups as needed by replicating the LogGroup resource block and providing unique log group names.
+Once deployed, your applications and services can send log data to the specified CloudWatch log groups. You can then use CloudWatch Logs Insights to query and analyze the log data or export it to other AWS services for further processing..

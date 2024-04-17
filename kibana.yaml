@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Deployment of Kibana for log visualization'
+
+Resources:
+  KibanaInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: 't2.micro'
+      ImageId: 'AMI_ID_PLACEHOLDER'
+      SecurityGroupIds:
+        - 'SECURITY_GROUP_ID_PLACEHOLDER'
+      KeyName: 'KEY_PAIR_NAME_PLACEHOLDER'
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          sudo yum update -y
+          sudo yum install -y java-1.8.0
+          sudo wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo rpm --import -
+          sudo yum install -y kibana
+          sudo systemctl start kibana
+          sudo systemctl enable kibana
+      Tags:
+        - Key: 'Name'
+          Value: 'KibanaInstance'
+
+Outputs:
+  KibanaInstancePublicIp:
+    Description: 'Public IP address of the Kibana instance'
+    Value: !GetAtt KibanaInstance.PublicIp
+

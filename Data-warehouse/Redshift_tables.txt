@@ -1,0 +1,10 @@
+The table names in Redshift will correspond to the names of the Parquet files. Here's a summary of the table names based on the Parquet files we have:
+
+merchant_data.parquet: Table name in Redshift will be merchant_data.
+currency_exchange_rates.parquet: Table name in Redshift will be currency_exchange_rates.
+user_profile_data.parquet: Table name in Redshift will be user_profile_data.
+transaction_metadata_data.parquet: Table name in Redshift will be transaction_metadata_data.
+device_and_location_data.parquet: Table name in Redshift will be device_and_location_data.
+fraud_indicators.parquet: Table name in Redshift will be fraud_indicators.
+customer_support_interactions.parquet: Table name in Redshift will be customer_support_interactions.
+Each table will contain the data from the corresponding Parquet file.

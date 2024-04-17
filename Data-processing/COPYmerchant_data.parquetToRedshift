@@ -1,0 +1,78 @@
+"""
+
+
+We'll use the names of the Parquet files as the table names in Redshift. Each Parquet file will correspond to a table in Redshift, and we'll load the data from these Parquet files into the respective Redshift tables using the COPY command.
+
+Let me provide you with an example COPY command for loading data from a Parquet file into a Redshift table. We'll use the merchant_data.parquet file as an example:
+"""
+
+#merchant_data.parquet
+
+COPY merchant_data
+FROM 's3://your-bucket/path/to/merchant_data.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+
+"""
+In this example:
+
+merchant_data: Specifies the target Redshift table where the data will be loaded.
+'s3://your-bucket/path/to/merchant_data.parquet': Specifies the location of the Parquet data file in Amazon S3.
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role': Specifies the IAM role ARN that Redshift uses to access the Amazon S3 bucket.
+FORMAT AS PARQUET: Specifies the data file format (in this case, Parquet).
+"""
+
+
+
+provide the COPY commands for loading data from all the Parquet files into Redshift tables:
+
+merchant_data.parquet:
+sql
+Copy code
+COPY merchant_data
+FROM 's3://your-bucket/path/to/merchant_data.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+currency_exchange_rates.parquet:
+sql
+Copy code
+COPY currency_exchange_rates
+FROM 's3://your-bucket/path/to/currency_exchange_rates.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+user_profile_data.parquet:
+sql
+Copy code
+COPY user_profile_data
+FROM 's3://your-bucket/path/to/user_profile_data.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+transaction_metadata_data.parquet:
+sql
+Copy code
+COPY transaction_metadata_data
+FROM 's3://your-bucket/path/to/transaction_metadata_data.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+device_and_location_data.parquet:
+sql
+Copy code
+COPY device_and_location_data
+FROM 's3://your-bucket/path/to/device_and_location_data.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+fraud_indicators.parquet:
+sql
+Copy code
+COPY fraud_indicators
+FROM 's3://your-bucket/path/to/fraud_indicators.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+customer_support_interactions.parquet:
+sql
+Copy code
+COPY customer_support_interactions
+FROM 's3://your-bucket/path/to/customer_support_interactions.parquet'
+IAM_ROLE 'arn:aws:iam::123456789012:role/my-redshift-role'
+FORMAT AS PARQUET;
+Replace 's3://your-bucket/path/to/...' with the actual S3 paths to your Parquet files, and IAM_ROLE with the ARN of the IAM role that Redshift will use to access the S3 bucket.

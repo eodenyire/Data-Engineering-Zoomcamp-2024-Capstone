@@ -1,0 +1,29 @@
+To create dashboards using Tableau Server, follow these steps:
+
+Connect to Data Sources:
+
+Open Tableau Desktop or navigate to the web interface of Tableau Server.
+Connect to the data sources that you published earlier on Tableau Server. These data sources contain the data from your Redshift database.
+Use the published data sources to build your visualizations and dashboards.
+Design Dashboards:
+
+Design the layout of your dashboards by arranging sheets, visualizations, and other elements.
+Create calculated fields as needed to perform additional analysis or calculations on the data.
+Add interactivity to your dashboards by using filters, parameters, and actions. This allows users to explore the data and drill down into specific details.
+Build Visualizations:
+
+Create visualizations such as charts, graphs, maps, and tables to represent your data.
+Choose appropriate visualization types based on the insights you want to convey and the characteristics of your data.
+Customize the appearance and formatting of your visualizations to improve clarity and readability.
+Publish Dashboards to Tableau Server:
+
+Once you've designed your dashboards in Tableau Desktop or the web interface, publish them to Tableau Server.
+In Tableau Desktop, navigate to the "Server" menu and select "Publish Workbook" to upload the dashboard to Tableau Server.
+Choose the appropriate Tableau Server project where you want to publish the dashboard.
+Provide any additional metadata and permissions settings, then click "Publish" to upload the dashboard to Tableau Server.
+Share and Collaborate:
+
+Once the dashboards are published to Tableau Server, users with appropriate permissions can access and interact with them.
+Share the dashboard links or embed them in web pages or applications for wider distribution.
+Collaborate with colleagues by commenting on dashboards, sharing insights, and collaborating on data analysis projects.
+By following these steps, you can create interactive dashboards and visualizations using Tableau Server, connect them to your Redshift data sources, and share insights with your team for informed decision-making.

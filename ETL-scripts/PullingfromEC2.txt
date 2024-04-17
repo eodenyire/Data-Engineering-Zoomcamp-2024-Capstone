@@ -1,0 +1,34 @@
+To pull files from the EC2 server using the provided connection details, you can create a bash script and use the scp command to securely copy the files to your local machine or the machine where Airflow is running. Here's a sample script to accomplish this:
+
+#!/bin/bash
+
+# Connection details
+IP="102.98.31.5"
+USERNAME="GlobalVISA"
+PORT="22"
+PASSWORD="gLOBAlSouth20203"
+
+# Source directory on the EC2 server
+SOURCE_DIR="/path/to/source/files"
+
+# Destination directory where files will be copied
+DEST_DIR="/path/to/destination"
+
+# Command to copy files using scp
+scp -P $PORT $USERNAME@$IP:$SOURCE_DIR/*.parquet $DEST_DIR
+
+# Verify if files are copied successfully
+if [ $? -eq 0 ]; then
+    echo "Files copied successfully."
+else
+    echo "Error: Failed to copy files."
+fi
+Replace /path/to/source/files with the actual path to the directory containing the parquet files on the EC2 server, and /path/to/destination with the path to the directory where you want to save the files locally.
+
+Save the script with a meaningful name (e.g., pull_parquet_files.sh) and make it executable using the following command:
+
+
+chmod +x pull_parquet_files.sh
+
+
+You can then use this script in your Airflow DAGs to pull the parquet files from the EC2 server. Modify the BashOperator task in your DAGs to execute this script, passing the appropriate arguments for the source and destination directories.

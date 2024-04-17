@@ -1,0 +1,33 @@
+Let's update the guide to include the steps for provisioning an EC2 instance for Power BI installation using Terraform:
+
+Step-by-Step Guide to Using Power BI with Redshift
+Provision EC2 Instance:
+
+Use Terraform to provision an EC2 instance for Power BI installation.
+Create a new Terraform configuration file (e.g., power_bi_instance.tf).
+Define the EC2 instance configuration, including instance type, AMI, security groups, and key pair.
+Run terraform init and terraform apply to deploy the EC2 instance.
+Connect to EC2 Instance:
+
+SSH into the provisioned EC2 instance using the public IP address or DNS name.
+Use the provided SSH key pair to authenticate.
+Install Power BI:
+
+Download the Power BI installation package from the official Microsoft website.
+Transfer the installation package to the EC2 instance using SCP or SFTP.
+Run the installation package using the appropriate commands for your operating system (e.g., sudo dpkg -i <package_name> for Debian-based systems).
+Launch Power BI Desktop:
+
+Once installed, launch Power BI Desktop from the application menu or command line.
+The Power BI Desktop interface will open, ready for data connections and report creation.
+Connect to Data Sources:
+
+Follow the previous steps to connect Power BI Desktop to your Redshift database.
+Enter the connection details and credentials as outlined in the previous guide.
+Import Data, Create Visualizations, and Build Dashboards:
+
+Continue with the steps outlined in the previous guide to import data, create visualizations, and build dashboards within Power BI Desktop.
+Publish to Power BI Service:
+
+Publish your reports to the Power BI service as described earlier.
+Sign in to your Power BI account and select the appropriate workspace for publishing.
