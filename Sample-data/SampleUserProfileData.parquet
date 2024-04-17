@@ -1,0 +1,12 @@
+user_id,age,gender,location,income_level
+1001,30,Male,Nairobi,High
+1002,25,Female,Mombasa,Medium
+1003,35,Male,Kisumu,High
+1004,40,Female,Eldoret,Low
+1005,22,Male,Nakuru,Medium
+1006,28,Male,Thika,Medium
+1007,50,Female,Nyeri,Low
+1008,33,Male,Kakamega,High
+1009,45,Female,Malindi,Low
+1010,29,Male,Lamu,Medium
+

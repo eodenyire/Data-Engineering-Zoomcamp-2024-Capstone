@@ -1,0 +1,5 @@
+promotion_id,name,start_date,end_date,discount_percentage
+1,Summer Sale,2024-06-01,2024-06-30,10
+2,Back-to-School Promotion,2024-08-01,2024-08-31,15
+3,Black Friday,2024-11-01,2024-11-30,20
+

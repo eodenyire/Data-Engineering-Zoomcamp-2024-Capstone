@@ -1,0 +1,44 @@
+Terraform Configuration Documentation
+Overview
+This documentation provides guidance on using Terraform to provision infrastructure resources for the data engineering project. The main.tf file contains Terraform configurations to set up AWS resources such as RDS for PostgreSQL, EC2 instance for Airflow, security groups, and S3 buckets.
+
+Prerequisites
+Before using Terraform, ensure you have the following prerequisites:
+
+An AWS account with appropriate permissions to create and manage resources.
+Terraform installed on your local machine.
+Installing Terraform
+To install Terraform on your local machine, follow these steps:
+
+Download the appropriate Terraform package for your operating system from the official Terraform website.
+Extract the downloaded package to a directory included in your system's PATH.
+Verify the installation by running terraform --version in your terminal or command prompt.
+Setting Up the Environment
+Before running Terraform commands, set up your environment as follows:
+
+Configure AWS credentials: Create an AWS IAM user with programmatic access and appropriate permissions. Set up AWS CLI or configure environment variables (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY) with the user's credentials.
+Create an SSH key pair: If you plan to launch EC2 instances, create an SSH key pair in the AWS console or using the aws ec2 create-key-pair command.
+Using the main.tf File
+The main.tf file contains Terraform configurations to provision AWS resources. Here's a breakdown of the key components:
+
+Provider
+Defines the AWS provider and specifies the desired region.
+
+Resources
+AWS RDS Instance: Defines an RDS instance for PostgreSQL with allocated storage, instance class, and credentials.
+AWS EC2 Instance: Defines an EC2 instance for Airflow with the specified AMI, instance type, key pair, security group, and user data script.
+Security Group: Defines a security group allowing SSH access to the Airflow EC2 instance.
+S3 Bucket: Defines an S3 bucket for data storage with private ACL.
+Outputs
+Defines output values for the RDS instance endpoint and the Airflow instance's public IP address.
+
+Running the main.tf File
+To provision resources using Terraform and the main.tf file, follow these steps:
+
+Navigate to the directory containing the main.tf file in your terminal or command prompt.
+Run terraform init to initialize the Terraform workspace and download provider plugins.
+Run terraform plan to generate an execution plan and review the proposed changes.
+Run terraform apply to apply the changes and provision the resources defined in the configuration.
+Confirm the changes when prompted by typing yes.
+Conclusion
+By following these instructions, you can use Terraform to automate the provisioning of infrastructure resources for your data engineering project. Terraform provides a simple and efficient way to manage infrastructure as code, enabling you to easily deploy and manage resources across different cloud providers.

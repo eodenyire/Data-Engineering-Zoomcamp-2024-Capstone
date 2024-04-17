@@ -1,0 +1,12 @@
+merchant_id,name,location,category,transaction_volume
+M001,Supermarket A,Nairobi,Retail,1000
+M002,Clothing Store B,Mombasa,Retail,500
+M003,Electronics Shop C,Kisumu,Retail,800
+M004,Hardware Store D,Eldoret,Retail,300
+M005,Bookstore E,Nakuru,Retail,200
+M006,Restaurant F,Thika,Food,100
+M007,Pharmacy G,Nyeri,Health,400
+M008,Jewelry Store H,Kakamega,Retail,600
+M009,Furniture Store I,Malindi,Retail,700
+M010,Sports Shop J,Lamu,Retail,900
+

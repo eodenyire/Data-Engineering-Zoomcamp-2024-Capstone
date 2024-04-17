@@ -1,0 +1,5 @@
+interaction_id,user_id,timestamp,action
+101,1001,2024-04-16 10:30:00,Inquiry
+102,1002,2024-04-16 11:30:00,Complaint
+103,1003,2024-04-16 12:30:00,Feedback
+
