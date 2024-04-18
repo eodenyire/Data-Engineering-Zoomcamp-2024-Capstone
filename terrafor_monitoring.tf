@@ -1,25 +1,25 @@
 # Define AWS CloudWatch alarms for monitoring
-resource "aws_cloudwatch_metric_alarm" "example_alarm" {
-  alarm_name          = "example_alarm"
+resource "aws_cloudwatch_metric_alarm" "zoomcamp_alarm" {
+  alarm_name          = "zoomcamp_alarm"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 2
-  metric_name         = "example_metric"
+  metric_name         = "zoomcamp_metric"
   namespace           = "AWS/EC2"
   period              = 300
   statistic           = "Average"
   threshold           = 80
   alarm_description   = "This metric monitors something important."
-  alarm_actions       = ["${aws_sns_topic.example_topic.arn}"]
+  alarm_actions       = ["${aws_sns_topic.zoomcamp_topic.arn}"]
 }
 
 # Define AWS CloudWatch log groups
-resource "aws_cloudwatch_log_group" "example_log_group" {
+resource "aws_cloudwatch_log_group" "zoomcamp_log_group" {
   name = "/var/log/example"
 }
 
 # Provision Elasticsearch cluster for log aggregation
-resource "aws_elasticsearch_domain" "example_elasticsearch" {
-  domain_name           = "example-elasticsearch"
+resource "aws_elasticsearch_domain" "zoomcamp_elasticsearch" {
+  domain_name           = "zoomcamp-elasticsearch"
   elasticsearch_version = "7.9"
   cluster_config {
     instance_type = "t2.small.elasticsearch"
@@ -27,16 +27,16 @@ resource "aws_elasticsearch_domain" "example_elasticsearch" {
 }
 
 # Deploy Logstash for log ingestion
-resource "aws_instance" "example_logstash" {
+resource "aws_instance" "zoomcamp_logstash" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
-  key_name      = "example_keypair"
+  key_name      = "zoomcamp_keypair"
 }
 
 # Deploy Kibana for log visualization
-resource "aws_instance" "example_kibana" {
+resource "aws_instance" "zoomcamp_kibana" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
-  key_name      = "example_keypair"
+  key_name      = "kibana_zoomcamp_keypair"
 }
 
