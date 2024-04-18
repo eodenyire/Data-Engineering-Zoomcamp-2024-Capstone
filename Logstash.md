@@ -3,7 +3,7 @@ Logstash is an open-source data processing pipeline that allows us to collect, p
 
 Here's how you can define an AWS CloudFormation template in YAML format to create an EC2 instance with Logstash installed:
 
----
+~~~
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'EC2 instance with Logstash for log ingestion and processing'
 
@@ -33,4 +33,4 @@ Outputs:
   LogstashInstancePublicIp:
     Description: 'Public IP address of the Logstash instance'
     Value: !GetAtt LogstashInstance.PublicIp
-    ----
+    ~~~
