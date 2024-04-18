@@ -1,7 +1,8 @@
+# Data Engineering Zoomcamp by Data Talks Club
 # End-to-End Data Engineering Pipeline
 
 ## Introduction
-This repository contains the code, documentation, and resources for the end-to-end data engineering pipeline developed as a capstone project for the Data Engineering Zoomcamp by DataTalks. The project aims to demonstrate proficiency in designing, implementing, and managing data pipelines to support various data processing, analysis, and visualization tasks.
+This repository contains the code, documentation, and resources for the end-to-end data engineering pipeline developed as a capstone project for the Data Engineering Zoomcamp by DataTalks. The project aims to demonstrate proficiency in designing, implementing, and managing data pipelines to support various data processing, analysis, and visualization tasks. Although we were supposed to use public datasets, my manager asked me to try this pipeline so that after the Zoomcamp, I may implement it for the Mpesa GlobalPay Consumer Visa Card.
 
 ## Disclaimer
 
@@ -16,8 +17,7 @@ The Data Engineering Zoomcamp by DataTalks is a comprehensive training program d
 
 ## Technologies Used
 - Apache Airflow
-- Apache NiFi
-- AWS services (S3, Redshift, Athena, EC2)
+- AWS services (S3, Redshift, EC2, Quicksight)
 - PostgreSQL
 - Kafka
 - Tableau
@@ -54,13 +54,10 @@ The end-to-end data engineering pipeline demonstrates proficiency in designing, 
 - `README.md`: The main README file for the repository, providing an overview of the project and its contents.
 
 ## Getting Started
-To get started with the project, clone the repository to your local machine and refer to the documentation and code files for detailed information about the project implementation.
+To get started with the project, clone the repository to your local machine and refer to the documentation and code files for detailed information about the project implementation. I have given lots of getting started guides which can be used to bring ourselves up to speed.
 
 ## Contributing
 Contributions to the project are welcome! Please fork the repository, make your changes, and submit a pull request for review.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 Special thanks to the instructors and mentors at the Data Engineering Zoomcamp by DataTalks for their guidance and support throughout the project.
