@@ -1,6 +1,5 @@
 Report Generation and Distribution: Python scripts or Airflow tasks will generate CSV reports containing analyzed data, stored in S3 buckets for easy access by business analysts. Notification mechanisms will alert stakeholders of new reports.
 
-
 To accomplish report generation and distribution effectively, you can follow these steps:
 
 Python Scripts or Airflow Tasks:
