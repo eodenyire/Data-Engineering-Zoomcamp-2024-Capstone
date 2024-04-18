@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 
 # Load data from Kafka topic into DataFrame
-data = pd.read_kafka('kafka_topic')
+data = pd.read_kafka('zoomcamp_kafka_topic')
 
 # Perform data preprocessing and feature engineering (example: dummy encoding for categorical variables)
 data = pd.get_dummies(data, columns=['categorical_column'])
