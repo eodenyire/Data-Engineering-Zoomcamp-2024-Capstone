@@ -1,4 +1,4 @@
-# Project Title: M-Pesa Global Virtual Visa Card Analytics Platform
+#<b> Project Title:</b> M-Pesa Global Virtual Visa Card Analytics Platform
 
 ## Project Overview
 This project aims to develop an analytics platform to gain insights into usage patterns, transaction trends, and customer behavior related to the Mpesa Global Virtual Visa card service. By analyzing transaction data and customer interactions, the platform will provide actionable insights to improve user experience, detect fraud, and optimize service performance.
