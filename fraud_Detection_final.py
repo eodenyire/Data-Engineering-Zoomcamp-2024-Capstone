@@ -14,7 +14,7 @@ This code expands the previous example to include feature scaling using Standard
 """
 
 # Load data from Kafka topic into DataFrame
-data = pd.read_kafka('kafka_topic')
+data = pd.read_kafka('zoomcamp_kafka_topic')
 
 # Perform data preprocessing and feature engineering
 # (Include your feature engineering steps here)
