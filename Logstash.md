@@ -1,10 +1,8 @@
-Logstash: Logstash is an open-source data processing pipeline that allows us to collect, parse, enrich, and transform log data before indexing it into Elasticsearch. We'll deploy Logstash instances to handle log ingestion, processing, and forwarding. We'll configure Logstash pipelines to define the input, filter, and output stages for processing log data according to our requirements.
+# Logstash: Logstash is an open-source data processing pipeline that allows us to collect, parse, enrich, and transform log data before indexing it into Elasticsearch. We'll deploy Logstash instances to handle log ingestion, processing, and forwarding. We'll configure Logstash pipelines to define the input, filter, and output stages for processing log data according to our requirements.
 
 
 Here's how you can define an AWS CloudFormation template in YAML format to create an EC2 instance with Logstash installed:
 
-yaml
-Copy code
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'EC2 instance with Logstash for log ingestion and processing'
 
