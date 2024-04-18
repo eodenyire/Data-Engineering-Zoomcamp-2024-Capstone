@@ -1,8 +1,9 @@
 # Data Engineering Zoomcamp by Data Talks Club
 # End-to-End Data Engineering Pipeline
 
-## Introduction
-This repository contains the code, documentation, and resources for the end-to-end data engineering pipeline developed as a capstone project for the Data Engineering Zoomcamp by DataTalks. The project aims to demonstrate proficiency in designing, implementing, and managing data pipelines to support various data processing, analysis, and visualization tasks. Although we were supposed to use public datasets, my manager asked me to try this pipeline so that after the Zoomcamp, I may implement it for the Mpesa GlobalPay Consumer Visa Card.
+[Data Engineering Zoomcamp](https://github.com/eodenyire/Data-Engineering-Zoomcamp-2024-Capstone/assets/61192633/fd231e1f-ae42-4c7a-b5d2-a38960eb4645)
+ ## Introduction
+This repository contains the code, documentation, and resources for the end-to-end data!engineering pipeline developed as a capstone project for the Data Engineering Zoomcamp by DataTalks. The project aims to demonstrate proficiency in designing, implementing, and managing data pipelines to support various data processing, analysis, and visualization tasks. Although we were supposed to use public datasets, my manager asked me to try this pipeline so that after the Zoomcamp, I may implement it for the Mpesa GlobalPay Consumer Visa Card.
 
 ## Disclaimer
 
